@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Qr Code Killer</string>
+    <string name="scan">Scan</string>
+    <string name="scan_to_pay">Scan the Qr Code to make payment.</string>
+    <string name="qr_code_scanner">Qr Code Scanner</string>
+    <string name="write_here_to_generate">Write here to generate</string>
+</resources>

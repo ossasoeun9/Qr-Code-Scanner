@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77057053230",
+    "project_id": "qr-code-killer",
+    "storage_bucket": "qr-code-killer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77057053230:android:2e53db57cf3774572705bf",
+        "android_client_info": {
+          "package_name": "com.sazzdev.qrcodekiller"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-CX17_JNlQvqkdwxXltCAWD7NcWPhv10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

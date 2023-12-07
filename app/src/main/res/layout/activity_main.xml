@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="qrCodeViewModel"
+            type="com.sazzdev.qrcodekiller.viewmodels.QrCodeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".views.MainActivity">
+        <com.google.android.material.appbar.MaterialToolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Qr Code Killer"/>
+        <Button
+            android:id="@+id/scanBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/qrCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan"/>
+        <ImageView
+            android:id="@+id/qrCode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@{qrCodeViewModel.qrCodeImage}"/>
+
+        <EditText
+            android:id="@+id/qrEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="20dp"
+            android:autofillHints="SSSS"
+            android:inputType="text"
+            android:hint="@string/write_here_to_generate"
+            android:onTextChanged="@{qrCodeViewModel::onTextChanged}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrCode"
+            tools:ignore="LabelFor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
